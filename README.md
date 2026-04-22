@@ -1,31 +1,34 @@
-# Online Retail Sales Analysis & Interactive Dashboard
+# Online Retail Sales Analysis & Interactive Tableau Dashboard
 
 ## Project Overview
-This project provides a comprehensive analysis of business sales data for an international online retail store. Using a dataset of approximately 12,000 transactions (Dec 2010), I performed data cleaning, feature engineering, and visualization to answer key business questions regarding revenue growth, product performance, and regional sales trends.
+This project involves a comprehensive data analysis of an E-commerce dataset (approx. 12,000 transactions). The goal was to transform raw sales data into actionable business intelligence to help a retail company understand its revenue drivers, customer behavior, and geographic strengths.
 
-## Key Business Questions Answered
-* **Revenue Trends:** What are the peak shopping hours for the business?
-* **Product Performance:** Which categories (Home Decor, Kitchenware, etc.) generate the most revenue?
-* **Regional Analysis:** Which international markets are driving the highest sales volume?
-* **Strategic Growth:** Where should the business focus its marketing efforts to maximize ROI?
+## Business Key Performance Indicators (KPIs)
+Based on the analysis of the processed data:
+* **Total Revenue:** $210,013.27
+* **Total Units Sold:** 89,578
+* **Top Market:** United Kingdom ($194,007 in revenue)
+* **Lead Category:** Home Decor ($44,767 in revenue)
 
-## Tools Used
-* **Excel:** Data cleaning, handling missing values, and advanced categorization using `IFS` and `SEARCH` functions.
-* **Tableau:** Building an interactive, cross-filtered dashboard for executive reporting.
+## Tech Stack
+* **Excel:** Data cleaning, missing value treatment, and product categorization using advanced logical formulas.
+* **Tableau:** Developed a multi-sheet interactive dashboard (`FUTURE_DS_01.twb`) for visual storytelling.
 
-## Project Structure
-* `Clean Online sales data.xlsx`: The cleaned dataset including calculated fields for Revenue, Hours, and Product Categories.
-* `FUTURE_DS_01.twb`: The Tableau Workbook containing the interactive dashboard.
+## Repository Contents
+* `Clean Online sales data.xlsx`: The finalized dataset featuring engineered columns for **Revenue**, **Hour**, and **Product Category**.
+* `FUTURE_DS_01.twb`: Tableau Workbook containing the interactive dashboard.
 
-## Data Cleaning Process
-To ensure the accuracy of the analysis, the following steps were taken:
-1. **Filtering:** Removed transactions with negative quantities (returns) and zero unit prices.
-2. **Missing Data:** Handled missing `CustomerID` fields by labeling them as "Guest" to preserve total revenue data.
-3. **Feature Engineering:** - Created a `Total Revenue` column (`Quantity` * `UnitPrice`).
-   - Extracted `Hours` from the timestamp to identify peak traffic periods.
-   - Built a custom **Product Categorization** logic to group 12,000+ rows into 7 distinct business segments (e.g., Seasonal, Kitchenware, Home Decor).
+## Data Transformation Logic
+To categorize the 11,000+ items accurately, a custom keyword-matching algorithm was applied in Excel:
+* **Seasonal:** Identified via keywords like "Christmas", "Tree", "Star".
+* **Kitchenware:** Items like "Cake", "Mug", "Tea", "Bottle".
+* **Home Decor:** Captured via "Heart", "Vintage", "Holder", "Light".
+* **Bags & Travel:** Including "Jumbo Bag", "Lunch Bag", and "Totes".
 
-## Key Insights
-* **Peak Traffic:** Sales significantly peak between **10:00 AM and 12:00 PM**, suggesting this is the optimal window for launching flash sales or promotional emails.
-* **Dominant Category:** **Home Decor** (including items with "Heart" and "Vintage" keywords) is a primary revenue driver, accounting for a significant portion of daily sales.
-* **Market Expansion:** While the UK is the primary market, **Norway and France** show high average order values, indicating strong potential for international expansion.
+## Strategic Insights & Recommendations
+1. **Optimize Peak Hours:** Data shows a significant revenue surge between **10:00 AM and 11:00 AM** (peaking at over $28,000 in an hour). 
+   - *Recommendation:* Schedule high-impact marketing campaigns for 9:45 AM to capture active buyers.
+2. **Category Growth:** **Kitchenware** and **Home Decor** are the core pillars of the business.
+   - *Recommendation:* Consider bundling top-selling Home Decor items with Kitchenware sets to increase the Average Order Value (AOV).
+3. **International Potential:** Outside the UK, **Germany and EIRE** are the most consistent markets. 
+   - *Recommendation:* Localized marketing and reduced shipping tiers for these two regions could drive immediate growth.
