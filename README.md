@@ -12,12 +12,10 @@ This project provides a comprehensive analysis of business sales data for an int
 ## Tools Used
 * **Excel:** Data cleaning, handling missing values, and advanced categorization using `IFS` and `SEARCH` functions.
 * **Tableau:** Building an interactive, cross-filtered dashboard for executive reporting.
-* **Python (Pandas):** Used for initial data profiling and keyword extraction to build the product taxonomy.
 
 ## Project Structure
-* `FUTURE_DS_01.xlsx`: The cleaned dataset including calculated fields for Revenue, Hours, and Product Categories.
+* `Clean Online sales data.xlsx`: The cleaned dataset including calculated fields for Revenue, Hours, and Product Categories.
 * `FUTURE_DS_01.twb`: The Tableau Workbook containing the interactive dashboard.
-* `analysis_report.pdf`: (Optional) A summary of business recommendations based on the data findings.
 
 ## Data Cleaning Process
 To ensure the accuracy of the analysis, the following steps were taken:
